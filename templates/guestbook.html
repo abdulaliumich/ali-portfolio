@@ -1,11 +1,6 @@
 {% extends "templates/base.html" %}
 
-{% block head %}
-<h1>Guestbook</h1>
-{% endblock %}
-
 {% block content %}
-	<div>
-		Sign the guestbook por favor
-	</div>
+	<a href="{{login}}">Login</a>
+	<a href="{{logout}}">Logout</a>
 {%endblock%}

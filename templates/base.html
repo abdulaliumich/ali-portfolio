@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<title>Ali Abdulhamid - {{current_page}}</title>
+
+	<!-- jQuery -->
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 	<!--BOOTSTRAP CDN -->
 	<!-- Latest compiled and minified CSS -->
@@ -13,22 +18,84 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- My stylesheet -->
+	<link rel="stylesheet" href="static/main.css">
 	
 </head>
 
 <body>
 	<header>
-		{% block head %}
-		Each page should be putting its unique h1 tag here.
-		{% endblock %}
-		
-		<ul class="nav nav-pills" role="navigation">
-  			<li role="presentation"><a href="index">{% if current_page == "INDEX" %}INDEX{% else %}Index{% endif %}</a></li>
-  			<li role="presentation"><a href = "about">{% if current_page == "ABOUT" %}ABOUT{% else %}About{% endif %}</a></li>
-  			<li role="presentation"><a href = "places">{% if current_page == "PLACES" %}PLACES{% else %}Places{% endif %}</a></li>
-  			<li role="presentation"><a href = "contact">{% if current_page == "CONTACT" %}CONTACT{% else %}Contact{% endif %}</a></li>
-  			<li role="presentation"><a href = "guestbook">{% if current_page == "GUESTBOOK" %}GUESTBOOK{% else %}Guestbook{% endif %}</a></li>
-		</ul>
+		<nav class="navbar navbar-default">
+			<div class="page-header">
+  <h1>Ali Abdulhamid</h1>
+</div>
+  			<div class="container-fluid">
+			    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        	<span class="icon-bar"></span>
+				        	<span class="icon-bar"></span>
+				        	<span class="icon-bar"></span> 
+			      	  </button>
+			      	  <span>Ali Abdulhamid</span>
+			    </div>
+    			<div class="collapse navbar-collapse navbar-left" id="myNavbar">
+      				<ul class="nav nav-pills nav-justified">
+				        <li class="{% if current_page == 'INDEX' %}active{% else %}{% endif %}">
+				        	<a href="/index">
+				        		<div>
+				        			<i class="fa fa-home"></i>
+				        			<span>HOME</span>
+				        		</div>
+				        	</a>
+				        </li>
+				        <li class="{% if current_page == 'ABOUT' %}active{% else %}{% endif %}">
+				        	<a href="/about">
+				        		<div>
+				        			<i class="fa fa-info"></i>
+				        			<span>ABOUT</span>
+				        		</div>
+				        	</a>
+				        </li>
+				        <li class="{% if current_page == 'PLACES' %}active{% else %}{% endif %}">
+				        	<a href="/places">
+				        		<div>
+				        			<i class="fa fa-globe"></i>
+				        			<span>PLACES</span>
+				        		</div>
+				        	</a>
+				        </li>
+				        <li class="{% if current_page == 'CONTACT' %}active{% else %}{% endif %}">
+				        	<a href="/contact">
+				        		<div>
+				        			<i class="fa fa-envelope-o"></i>
+				        			<span>CONTACT</span>
+				        		</div>
+				        	</a>
+				        </li>
+				        <li class="{% if current_page == 'GUESTBOOK' %}active{% else %}{% endif %}">
+				        	<a href="/guestbook">
+				        		<div>
+				        			<i class="fa fa-book"></i>
+				        			<span>GUESTBOOK</span>
+				        		</div>
+				        	</a>
+				        </li>
+				        <li class="{% if current_page == 'LOGIN' %}active{% else %}{% endif %}">
+				        	<a href="#">
+				        		<div>
+				        			<i class="fa fa-sign-in"></i>
+				        			<span>LOGIN</span>
+				        		</div>
+				        	</a>
+				        </li>
+      				</ul>
+    			</div>
+  			</div>
+		</nav>
 	</header>
 
 

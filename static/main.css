@@ -1,0 +1,98 @@
+.navbar-toggle {
+	float: left;
+}
+
+.page-header {
+	margin-left: 5px;
+	display: none;
+}
+
+.nav {
+	margin-bottom: 25px;
+}
+
+.navbar-header > span {
+	text-align: right;
+	display: inherit;
+	margin-top: 4px;
+	font-size: 30px;
+}
+
+.nav-pills > li > a {
+	border: 1px solid black;
+	color: black;
+	background-color: white;
+	font-weight: bold;
+}
+	.nav-pills > li.active > a {
+		background-color: black;
+	}
+
+footer {
+	height: 70px;
+	margin-top: -70px;
+	background-color: blue;
+	clear: both;
+}
+
+/* Media queries */
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.page-header {
+		display: block;
+		text-align: center;
+	}
+
+	.navbar-header > span {
+		display: none;
+	}
+
+	/* Make each item in the navbar a circle */
+	.nav-pills > li > a {
+		width: 115px;
+		height: 115px;
+		border-radius: 50%;
+	}
+
+		/* Center icon and text in the circle */
+		.nav-pills > li > a > div {
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+			/* Increase size if icon and put it on its own line */
+			.nav-pills > li > a > div > i {
+				font-size: 3em;
+				display: block;
+			}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	/* Set items in the navbar to the pill format */
+	.nav-pills > li > a {
+		border-radius: 4px;
+		height: 40px;
+		width: 143px;
+	}
+		.nav-pills > li > a > div {
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+
+			/* Remove icons in desktop view */
+			.nav-pills > li > a > div > i {
+				display: none;
+			}
+}

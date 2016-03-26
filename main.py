@@ -1,30 +1,10 @@
-#!/usr/bin/env python
-#
-# Copyright 2007 Google Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-import webapp2
-import os
+from config import JINJA_ENVIRONMENT
+from google.appengine.api import users
+from models import GuestbookMessage
 import logging
-import jinja2
+import webapp2
 
-JINJA_ENVIRONMENT = jinja2.Environment(
-    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
-    extensions=['jinja2.ext.autoescape'],
-    autoescape=True)
-
-#This class handles all pathnames
+#This class handles routing to all pathnames except for guestbook
 class MainHandler(webapp2.RequestHandler):
     def get(self):
     	logging.info("GET Request for MainHandler called. Pathname: " + self.request.path)
@@ -48,8 +28,14 @@ class MainHandler(webapp2.RequestHandler):
 
         self.response.write(template.render({"current_page": current_page}))
 
+#This class handles routing to the guestbook page
+class GuestbookHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template("templates/guestbook.html")
+        self.response.write(template.render({"login": users.create_login_url('/'), "logout":users.create_logout_url('/')}))
 
 
 app = webapp2.WSGIApplication([
+    ('/guestbook', GuestbookHandler),
     ('/.*', MainHandler)
 ], debug=True)

@@ -24,15 +24,25 @@
 
 	<!-- My stylesheet -->
 	<link rel="stylesheet" href="static/main.css">
+
+	<!-- My JS file -->
+	<script src="static/main.js"></script
 	
 </head>
 
 <body>
 	<header>
+		<div class="page-header">
+  			<h1>Ali Abdulhamid</h1>
+  			<a href="{{logUrl}}">
+  				<img id ="bigSignInButton" src="static/signin/btn_google_signin_light_normal_web.png" alt="Google Sign In Button"
+  				onload="loginButton('bigSignInButton', 'bigLogout', {{loggedIn}})" onmouseover ="signInMouseOver('bigSignInButton')"
+  				onmouseout="signInMouseOut('bigSignInButton')" onmousedown="signInMouseDown('bigSignInButton')"/>
+  				<span id="bigLogout">Log out</span>
+  			</a>
+		</div>
+
 		<nav class="navbar navbar-default">
-			<div class="page-header">
-  <h1>Ali Abdulhamid</h1>
-</div>
   			<div class="container-fluid">
 			    <div class="navbar-header">
 				      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -40,9 +50,17 @@
 				        	<span class="icon-bar"></span>
 				        	<span class="icon-bar"></span> 
 			      	  </button>
-			      	  <span>Ali Abdulhamid</span>
+			      	  <div>
+			      	  	<span>Ali Abdulhamid</span>
+			      	  	<a href="{{logUrl}}">
+			      	  		<img id="smallSignInButton" src="static/signin/btn_google_light_normal_ios.png" alt="Google Sign In Button"
+			      	  		onload="loginButton('smallSignInButton', 'smallLogout', {{loggedIn}})" onmouseover = "signInMouseOver('smallSignInButton')" onmouseout="signInMouseOut('smallSignInButton')"
+			      	  		onmousedown="signInMouseDown('bigSignInButton')"/>
+			      	  	</a>
+			      	  	<span id="smallLogout">Log out</span>
+			      	  </div>
 			    </div>
-    			<div class="collapse navbar-collapse navbar-left" id="myNavbar">
+    			<div class="collapse navbar-collapse" id="myNavbar">
       				<ul class="nav nav-pills nav-justified">
 				        <li class="{% if current_page == 'INDEX' %}active{% else %}{% endif %}">
 				        	<a href="/index">
@@ -84,14 +102,6 @@
 				        		</div>
 				        	</a>
 				        </li>
-				        <li class="{% if current_page == 'LOGIN' %}active{% else %}{% endif %}">
-				        	<a href="#">
-				        		<div>
-				        			<i class="fa fa-sign-in"></i>
-				        			<span>LOGIN</span>
-				        		</div>
-				        	</a>
-				        </li>
       				</ul>
     			</div>
   			</div>
@@ -102,8 +112,12 @@
 	{% block content %}
 	Each page should be putting its unique content here.
 	{% endblock %}
+
+	
 	<footer>
-		<p>Copyright &copy; 2016 Ali Abdulhamid.&nbsp; <a href = "http://www.umich.edu">Go Blue!</a></p>
+		<p>Copyright &copy; 2016 Ali Abdulhamid.&nbsp; 
+			<a href = "http://www.umich.edu">Go Blue!</a>
+		</p>
 	</footer>
 	
 </body>

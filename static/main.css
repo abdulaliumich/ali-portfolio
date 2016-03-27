@@ -1,22 +1,39 @@
+/* Only display this div for the tablet/desktop views */
+.page-header {
+	display: none;
+	text-align: center;
+	border: 0px;
+	margin: 0px;
+}
+	.page-header > h1 {
+		font-size: 50px;
+	}
+
+/* Navigation stuff */
+
+.navbar {
+	min-height: 0px;
+}
+
+/* Put the mobile hamburger menu on the left side */
 .navbar-toggle {
 	float: left;
 }
 
-.page-header {
-	margin-left: 5px;
-	display: none;
+/* The mobile header */
+.navbar-header > div {
+	text-align: center;
 }
 
-.nav {
-	margin-bottom: 25px;
-}
+	.navbar-header > div > span {
+		font-size: 34px;
+	}
 
-.navbar-header > span {
-	text-align: right;
-	display: inherit;
-	margin-top: 4px;
-	font-size: 30px;
-}
+	.navbar-header > div > a > img {
+		float: right;
+		margin-right: 5px;
+	}
+/*					 */
 
 .nav-pills > li > a {
 	border: 1px solid black;
@@ -27,13 +44,29 @@
 	.nav-pills > li.active > a {
 		background-color: black;
 	}
+		.nav-pills > li.active > a:hover {
+			background-color: red;
+		}
+
+
+/* Footer stuff */
 
 footer {
-	height: 70px;
-	margin-top: -70px;
-	background-color: blue;
-	clear: both;
+	position: relative;
+	height: 60px;
+	bottom: 0px;
+	margin-top: 20px;
+	background-color: #FAFAFA;
+	border: 1px solid #E7E7E7;
+	width: 100%;
 }
+	footer p {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		padding-left: 4px;
+		font-size: 20px;
+	}
 
 /* Media queries */
 
@@ -49,12 +82,12 @@ footer {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	/* Make the page header visible */
 	.page-header {
 		display: block;
-		text-align: center;
 	}
 
-	.navbar-header > span {
+	.navbar-header > div {
 		display: none;
 	}
 
@@ -70,7 +103,7 @@ footer {
 			margin-top: 15px;
 			margin-bottom: 15px;
 		}
-			/* Increase size if icon and put it on its own line */
+			/* Increase size of icon and put it on its own line */
 			.nav-pills > li > a > div > i {
 				font-size: 3em;
 				display: block;

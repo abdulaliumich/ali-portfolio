@@ -19,20 +19,31 @@ class MainHandler(webapp2.RequestHandler):
             if self.request.path.islower() == False:
                 raise Exception ('pathname must be all lower case')
             template = JINJA_ENVIRONMENT.get_template("templates/" + self.request.path + ".html")
-            #current_page should end up being one of the following four values: "INDEX", "ABOUT", "PLACES", "CONTACT", "GUESTBOOK"
+            #current_page should end up being one of the following four values: "INDEX", "ABOUT", "PLACES", "CONTACT"
             current_page = self.request.path[1:].upper()
         except:
             logging.info("Redirecting to index.html")
             template = JINJA_ENVIRONMENT.get_template("templates/index.html")
             current_page = "INDEX"
 
-        self.response.write(template.render({"current_page": current_page}))
+        
+        #Move to function
+        loggedIn = 0
+        logUrl = users.create_login_url(self.request.path)
+        user = users.get_current_user()
+
+        #Someone is logged in
+        if user:
+            loggedIn = 1
+            logUrl = users.create_logout_url(self.request.path)
+
+        self.response.write(template.render({"current_page": current_page, "loggedIn": loggedIn, "logUrl": logUrl}))
 
 #This class handles routing to the guestbook page
 class GuestbookHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template("templates/guestbook.html")
-        self.response.write(template.render({"login": users.create_login_url('/'), "logout":users.create_logout_url('/')}))
+        self.response.write(template.render({"current_page": "GUESTBOOK", "loggedIn": 1, "logUrl": users.create_login_url(self.request.path)}))
 
 
 app = webapp2.WSGIApplication([

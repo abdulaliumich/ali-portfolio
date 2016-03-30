@@ -1,5 +1,21 @@
 {% extends "templates/base.html" %}
 
 {% block content %}
-	hi
+	
+	<form method="post" action='/guestbook'>
+		<input name='jk' type="text">
+		<input type="submit">
+	</form>
+	<ul>
+	{% for message in messages %}
+		<li>
+			{{message.user}} wrote {{message.message}} on {{message.timestamp.month}}/{{message.timestamp.day}}/{{message.timestamp.year}}
+		</li>
+	{% endfor %}
+	</ul>
+	<ul class="pager">
+  <li class="previous"><a href="{% if message_block - 10 >= 0 %}/guestbook?start={{message_block - 10}} {% else %}{% endif %}">Previous</a></li>
+  <li class="next"><a href="{% if more_messages %} /guestbook?start={{message_block + 10}} {% else %}{% endif %}">Next</a></li>
+</ul>
 {%endblock%}
+"{% if current_page == 'INDEX' %}active{% else %}{% endif %}"

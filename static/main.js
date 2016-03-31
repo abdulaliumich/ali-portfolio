@@ -5,7 +5,7 @@ function signInMouseOver (loginId) {
 		document.getElementById(loginId).src="static/signin/btn_google_signin_light_focus_web.png";
 	}
 	else if (loginId == "smallSignInButton") {
-		document.getElementById(loginId).src="static/signin/btn_google_light_normal_ios.png";
+		document.getElementById(loginId).src="static/signin/btn_google_light_focus_ios.png";
 	}
 	else {
 		console.log("invalid argument");
@@ -18,7 +18,7 @@ function signInMouseOut (loginId) {
 		document.getElementById(loginId).src="static/signin/btn_google_signin_light_normal_web.png";
 	}
 	else if (loginId == "smallSignInButton") {
-		document.getElementById(loginId).src="static/signin/btn_google_light_focus_ios.png";
+		document.getElementById(loginId).src="static/signin/btn_google_light_normal_ios.png";
 	}
 	else {
 		console.log("invalid argument");

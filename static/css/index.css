@@ -1,4 +1,4 @@
-.myImage {
+.main-image {
 	background:url('../imgs/ezcaba.jpg');
 	opacity: 0.9;
 	background-size: cover;
@@ -7,12 +7,73 @@
 	min-height: 200px;
 	display: table;
 }
-	.myImage h1 {
-		color: white;
+	.main-image h1 {
 		vertical-align: middle;
 		display: table-cell;
 		text-align: center;
+		color: white;
 	}
+
+#index-body {
+	color: black;
+	text-align: center;
+}
+
+#intro {
+	margin: 5% 3% 3% 3%;
+	font-size: 2em;
+}
+
+#section-container {
+	margin-top: 5%;
+	margin-bottom: 5%;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	padding-top: 5%;
+	padding-bottom: 7%;
+	height: 100%;
+}
+
+#section-header {
+	font-size: 2em;
+	margin-bottom: 3%;
+}
+
+#section {
+	margin-left: 2%;
+	margin-right: 2%;
+	height: 100%;
+}
+
+#section > div > a {
+	position: relative;
+	text-decoration: none;
+	color: blue;
+	min-height: 100%;
+}
+#section > div > a:visited {
+	color: blue;
+}
+	#section > div > a > div {
+		border: 1px solid black;
+		margin-left: 2%;
+		font-weight: bold;
+	}
+		#section > div > a:hover > div {
+			background-color: black;
+		}
+			#section > div > a > div > div{
+				margin-bottom: 2%;
+			}
+			#section > div > a > div > p{
+				margin: 2%;
+				font-weight: normal;
+			}
+
+			#section> div > a > div > div > i {
+				display: block;
+				font-size: 4em;
+			}
 
 /* Media queries */
 
@@ -37,10 +98,10 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-	.myImage {
+	.main-image {
 		min-height: 400px;
 	}
-		.myImage h1 {
+		.main-image h1 {
 			font-size: 4em;
 		}
 
@@ -48,10 +109,10 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-	.myImage {
+	.main-image {
 		min-height: 700px;
 	}
-		.myImage h1 {
+		.main-image h1 {
 			font-size: 6em;
 		}
 }

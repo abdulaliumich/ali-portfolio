@@ -1,12 +1,8 @@
 /* Header stuff */
-body {
-	background-color: #00334d;
-}
 
 /* Navigation stuff */
 
 .container-fluid {
-	background-color: #00334d;
 }
 
 .navbar  {
@@ -26,8 +22,7 @@ body {
 	}
 		.nav-pills > li > a {
 			border: 1px solid black;
-			color: white;
-			background-color: #00334d;
+			color: black;
 			font-weight: bold;
 		}
 			.nav-pills > li > a:hover {
@@ -50,7 +45,6 @@ footer {
 	height: 60px;
 	bottom: 0px;
 	margin-top: 20px;
-	background-color: #00334d;
 	width: 100%;
 }
 	footer p {

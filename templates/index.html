@@ -7,27 +7,71 @@
 
 
 {% block content %} 
-<div class="myImage">
+<div class="main-image">
 	<h1>Ali Abdulhamid</h1>
-
 </div>
 
-<div class="row">
-	<div class="col-xs-12 col-sm-4">
-		<p>Hello, and welcome to my website. Here, you will find a little bit about myself
-  		   as well as some of my favorite places in the world. You can also login and logout of the website
-   		   if you know the correct username and password. This website was made using jinja2. Enjoy!
-		</p>	
+<div id="index-body">
+	<div class="row" id="intro">
+		<div class="col-xs-12">
+			<p>
+				My name is Ali Abdulhamid, and I study Computer Science at the University of Michigan.
+				In my portfolio, you will find more information about me, such as my personal and academic background as well as some of my favorite places that I have traveled to. If you get a chance, feel free to login and sign the guestbook!
+			</p>  	
+		</div>
 	</div>
-	<div class="col-xs-12 col-sm-4">
-		<p>
-			dsfoiupa
-		</p>
-	</div>
-	<div class="col-xs-12 col-sm-4">
-		<p> 
-			fiuposifupodiu
-		</p>
+	<div id="section-container">
+		<div class="row" id="section-header">
+			<div class="col-xs-12">
+				Click on a section to see the different areas of my website!
+			</div>
+		</div>
+		<div class="row" id="section">
+			<div class="col-xs-12 col-sm-6 col-md-3">
+				<a href="/about">
+					<div>
+						<div>
+							<i class="fa fa-info"></i>
+							<p>ABOUT</p>
+						</div>
+						<p> Information on myself, including my background, experiences, and interests. </p>
+					</div>
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 section">
+				<a href="/places">
+					<div>
+						<div>
+							<i class="fa fa-globe"></i>
+							<p>PLACES</p>
+						</div>
+						<p> A gallery of photos I took on some of my favorite journeys around the world. </p>
+					</div>
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 section">
+				<a href="/contact">
+					<div>
+						<div>
+							<i class="fa fa-envelope-o"></i>
+							<p>CONTACT</p>
+						</div>
+						<p> My contact information as well as links to some of my social media accounts. </p>
+					</div>
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 section">
+				<a href="/guestbook">
+					<div>
+						<div>
+							<i class="fa fa-book"></i>
+							<p>GUESTBOOK</p>
+						</div>
+						<p> My contact information as well as links to some of my social media accounts. </p>
+					</div>
+				</a>
+			</div>
+		</div>
 	</div>
 </div>
 

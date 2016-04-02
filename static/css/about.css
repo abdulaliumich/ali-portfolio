@@ -1,0 +1,12 @@
+.jumbotron {
+	text-align: center;
+}
+
+.jumbotron img {
+	width: 40%;
+	border-radius: 50%;
+}
+
+#about-body > container > row {
+	text-align: center;
+}

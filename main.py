@@ -101,7 +101,7 @@ class GuestbookHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template("templates/guestbook.html")
         mes = GuestbookMessage(parent=ndb.Key('Guestbook', 'AliGuestbook'))
         mes.user = users.get_current_user().nickname()
-        mes.message = self.request.get('jk')
+        mes.message = self.request.get('message')
         mes.put()
         #Add a second to give time for message to be added to the database 
         #and appear with the rest of the messages on redirect (hacky solution for now)

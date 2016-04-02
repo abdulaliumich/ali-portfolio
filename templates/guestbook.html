@@ -1,21 +1,44 @@
 {% extends "templates/base.html" %}
 
+{% block head %}
+<!-- My guestbook stylesheet -->
+<link rel="stylesheet" href="static/css/guestbook.css">
+{% endblock %}
+
 {% block content %}
-	
-	<form method="post" action='/guestbook'>
-		<input name='jk' type="text">
-		<input type="submit">
-	</form>
-	<ul>
-	{% for message in messages %}
-		<li>
-			{{message.user}} wrote {{message.message}} on {{message.timestamp.month}}/{{message.timestamp.day}}/{{message.timestamp.year}}
-		</li>
-	{% endfor %}
-	</ul>
-	<ul class="pager">
-  <li class="previous"><a href="{% if message_block - 10 >= 0 %}/guestbook?start={{message_block - 10}} {% else %}{% endif %}">Previous</a></li>
-  <li class="next"><a href="{% if more_messages %} /guestbook?start={{message_block + 10}} {% else %}{% endif %}">Next</a></li>
-</ul>
+
+	<div id="guestbook-body">
+		<div class="main-image">
+			<h1>Guestbook </h1>
+		</div>
+		<div class="container">
+			<div class="row" id="compose-message">
+				<div class="col-xs-12 col-md-4">
+					<h2>Write your message here:</h2>
+					<form method="post" action='/guestbook'>
+						<textarea name='message' id='message-input' rows="3"></textarea>
+						<br>
+						<input type="submit" class="btn btn-success" id="submit" value="Post">
+					</form>
+				</div>
+			</div>
+		{% for message in messages %}
+			<div class="row">
+				<div class="col-xs-12 message">
+					<div class="message-header">
+						<p>On {{message.timestamp.month}}/{{message.timestamp.day}}/{{message.timestamp.year}}, {{message.user}} wrote: </p>
+					</div>
+					<div class="message-body">
+						<p> {{message.message}} </p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+		
+		<ul class="pager">
+	  		<li class="previous"><a href="{% if message_block - 10 >= 0 %}/guestbook?start={{message_block - 10}} {% else %}{% endif %}">Previous</a></li>
+	  		<li class="next"><a href="{% if more_messages %} /guestbook?start={{message_block + 10}} {% else %}{% endif %}">Next</a></li>
+		</ul>
+	</div>
 {%endblock%}
 "{% if current_page == 'INDEX' %}active{% else %}{% endif %}"

@@ -130,6 +130,9 @@ footer {
 		margin-top: 22px;
 		margin-right: 10px;
 	}
+		#bigButton #bigLogout {
+			margin-top: 6px;
+		}
 
 }
 

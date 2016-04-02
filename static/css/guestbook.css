@@ -1,0 +1,107 @@
+#guestbook-body {
+	background:url('../imgs/landscape.jpg');
+	opacity: 0.8;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-width: 100%;
+	min-height: 200px;
+}
+	#guestbook-body h1 {
+		text-align: center;
+		color: white;
+		font-weight: bold;
+		margin: 0 auto;
+	}
+
+
+	#guestbook-body .container {
+		margin-top: 50px;
+		background-color: white;
+		color:black;
+		opacity: .9;
+	}
+
+		#guestbook-body .container h2 {
+			width: 100%;
+			text-align: center;
+		}
+
+#compose-message {
+	margin-bottom: 10px;
+}
+
+#message-input {
+	width: 100%;
+	height:100px;
+}
+
+#submit {
+	margin-top: 4px;
+	float: right;
+}
+
+.message-header {
+	display: table;
+	padding-left: 5px;
+	margin-left: 0;
+	font-size: 1.5em;
+}
+	.message-header p {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+.message-body {
+	display: table;
+	width: 100%;
+	border-bottom: 1px solid black;
+	padding-left: 5px;
+	font-size: 1.2em;
+}
+	.message-body p {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+
+
+/* Media queries */
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+	.message-header {
+		min-height: 20px;
+	}
+
+	.message-body {
+		min-height: 60px;
+	}
+
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	#guestbook-body h1 {
+		font-size: 4em;
+	}
+
+	.message-header {
+		min-height: 30px;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	#guestbook-body h1 {
+		font-size: 6em;
+	}
+	.message-header {
+		min-height: 40px;
+	}
+}

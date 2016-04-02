@@ -1,0 +1,57 @@
+.myImage {
+	background:url('../imgs/ezcaba.jpg');
+	opacity: 0.9;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-width: 100%;
+	min-height: 200px;
+	display: table;
+}
+	.myImage h1 {
+		color: white;
+		vertical-align: middle;
+		display: table-cell;
+		text-align: center;
+	}
+
+/* Media queries */
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+	.myImage {
+		min-height: 200px;
+	}
+		.myImage h1 {
+			font-size: 2em;
+		}
+
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+	.myImage {
+		min-height: 300px;
+	}
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.myImage {
+		min-height: 400px;
+	}
+		.myImage h1 {
+			font-size: 4em;
+		}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.myImage {
+		min-height: 700px;
+	}
+		.myImage h1 {
+			font-size: 6em;
+		}
+}

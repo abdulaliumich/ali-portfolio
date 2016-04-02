@@ -1,0 +1,173 @@
+/* Header stuff */
+body {
+	background-color: #00334d;
+}
+
+/* Navigation stuff */
+
+.container-fluid {
+	background-color: #00334d;
+}
+
+.navbar  {
+	min-height: 0px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	border: 0px;
+
+}
+
+.nav-pills {
+	display: inline-block;
+	margin-bottom: 0px;
+}
+	.nav-pills > li {
+		margin-right: 15px;
+	}
+		.nav-pills > li > a {
+			border: 1px solid black;
+			color: white;
+			background-color: #00334d;
+			font-weight: bold;
+		}
+			.nav-pills > li > a:hover {
+				background-color: #1a1a1a;
+			}
+			
+			/* Current page */
+			.nav-pills > li.active > a {
+				background-color: black;
+			}
+				.nav-pills > li.active > a:hover {
+					background-color: #1a1a1a;
+				}
+
+
+/* Footer stuff */
+
+footer {
+	position: relative;
+	height: 60px;
+	bottom: 0px;
+	margin-top: 20px;
+	background-color: #00334d;
+	width: 100%;
+}
+	footer p {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		padding-left: 4px;
+		font-size: 20px;
+	}
+
+/* Media queries */
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+	/* Put the mobile hamburger menu on the left side */
+	.navbar-toggle {
+		float: left;
+	}
+
+	/* The mobile header */
+	.navbar-header > div {
+		text-align: center;
+	}
+
+		.navbar-header > div > span:first-child {
+			font-size: 34px;
+		}
+
+	/* Switch tablet/desktop login buttons with mobile version */
+	#smallButton {
+		display: inline-block;
+		float: right;
+	}
+	#bigButton {
+		display: none;
+	}
+
+	/*					 */
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+	.navbar-header > div {
+		display: none;
+	}
+
+	/* Make each item in the navbar a circle */
+	.nav-pills > li > a {
+		width: 95px;
+		height: 90px;
+		border-radius: 50%;
+		display: table;
+	}
+
+		/* Center icon and text in the circle */
+		.nav-pills > li > a > div {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			font-size: 0.7em;
+		}
+			/* Increase size of icon and put it on its own line */
+			.nav-pills > li > a > div > i {
+				font-size: 3em;
+				padding-bottom: 2px;
+				display: block;
+			}
+
+	
+	/* Switch mobile login buttons with tablet/desktop version */
+	#smallButton {
+		display: none;
+	}
+	#bigButton {
+		display: inline-block;
+		margin-top: 22px;
+		margin-right: 10px;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	/* Set items in the navbar to the pill format */
+	.nav-pills > li > a {
+		border-radius: 4px;
+		height: 46px;
+		width: 110px;
+		display: table;
+	}
+		.nav-pills > li > a > div {
+			display: table-cell;
+			text-align: center;
+			font-size: 0.8em;
+			vertical-align: middle;
+		}
+
+			/* Remove icons in desktop view */
+			.nav-pills > li > a > div > i {
+				display: none;
+			}
+
+	.navbar-right > li {
+		margin-bottom: 10px;
+		vertical-align: middle;
+	}
+
+	#bigButton {
+		margin-top: 0px;
+		margin-right: 0px;
+	}
+
+}

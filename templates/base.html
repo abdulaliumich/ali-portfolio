@@ -6,7 +6,7 @@
 	<title>Ali Abdulhamid - {{current_page}}</title>
 
 	<!-- source code for twitter buttons -->
-	<script src="static/twitter.js"></script>
+	<script src="static/js/twitter.js"></script>
 
 	<!-- jQuery -->
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -25,29 +25,20 @@
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-	<!-- My stylesheet -->
-	<link rel="stylesheet" href="static/main.css">
+	<!-- My base stylesheet -->
+	<link rel="stylesheet" href="static/css/base.css">
 
 	<!-- My JS file -->
-	<script src="static/main.js"></script>
+	<script src="static/js/main.js"></script>
+
+	{% block head %}
+	This section should be used in other pages for links to other css files
+	{% endblock %}
 	
 </head>
 
 <body>
 	<header>
-		<!-- This header part only shows up when the user is on a screen size of a tablet or bigger -->
-		<div class="page-header">
-  			<h1>Ali Abdulhamid</h1>
-  			<!-- Will display when user is not logged in -->
-  			<a href="{{log_url}}">
-  				<img id ="bigSignInButton" src="static/signin/btn_google_signin_light_normal_web.png" alt="Google Sign In Button"
-  				onload="loginButton('bigSignInButton', 'bigLogout', {{logged_in}})" onmouseover ="signInMouseOver('bigSignInButton')"
-  				onmouseout="signInMouseOut('bigSignInButton')" onmousedown="signInMouseDown('bigSignInButton')"/>
-  			</a>
-  			<!-- Will display when user is logged in -->
-  			<a href="{{log_url}}" class="btn btn-primary" id="bigLogout" role="button">Log Out</a>
-		</div>
-
 		<nav class="navbar navbar-default">
   			<div class="container-fluid">
 			    <div class="navbar-header">
@@ -59,18 +50,20 @@
 			      	  <!-- This header part only shows up when the user is on mobile -->
 			      	  <div>
 			      	  	<span>Ali Abdulhamid</span>
-			      	  	<!-- Will display when user is logged out -->
-			      	  	<a href="{{log_url}}">
-			      	  		<img id="smallSignInButton" src="static/signin/btn_google_light_normal_ios.png" alt="Google Sign In Button"
-			      	  		onload="loginButton('smallSignInButton', 'smallLogout', {{logged_in}})" onmouseover = "signInMouseOver('smallSignInButton')" onmouseout="signInMouseOut('smallSignInButton')"
-			      	  		onmousedown="signInMouseDown('smallSignInButton')"/>
-			      	  	</a>
-			 		  	<!-- Will display when user is logged in -->
-  						<a href="{{log_url}}" class="btn btn-primary" id="smallLogout" role="button">Log Out</a>
+				      	<!-- Will display when user is logged out -->
+				      	<span id="smallButton">
+				      	  	<a href="{{log_url}}">
+				      	  		<img id="smallSignInButton" src="static/imgs/signin/btn_google_light_normal_ios.png" alt="Google Sign In Button"
+				      	  		onload="loginButton('smallSignInButton', 'smallLogout', {{logged_in}})" onmouseover = "signInMouseOver('smallSignInButton')" onmouseout="signInMouseOut('smallSignInButton')"
+				      	  		onmousedown="signInMouseDown('smallSignInButton')"/>
+				      	  	</a>
+				 		  	<!-- Will display when user is logged in -->
+							<a href="{{log_url}}" class="btn btn-primary" id="smallLogout" role="button">Log Out</a>
+						</span>
 			      	  </div>
 			    </div>
     			<div class="collapse navbar-collapse" id="myNavbar">
-      				<ul class="nav nav-pills nav-justified">
+      				<ul class="nav nav-pills">
 				        <li class="{% if current_page == 'INDEX' %}active{% else %}{% endif %}">
 				        	<a href="/index">
 				        		<div>
@@ -112,6 +105,20 @@
 				        	</a>
 				        </li>
       				</ul>
+      				<ul class="nav navbar-right">
+	  					<li id="bigButton">
+	  						<div>
+						  		<!-- Will display when user is not logged in -->
+					  			<a href="{{log_url}}">
+					  				<img id ="bigSignInButton" src="static/imgs/signin/btn_google_signin_light_normal_web.png" alt="Google Sign In Button"
+					  				onload="loginButton('bigSignInButton', 'bigLogout', {{logged_in}})" onmouseover ="signInMouseOver('bigSignInButton')"
+					  				onmouseout="signInMouseOut('bigSignInButton')" onmousedown="signInMouseDown('bigSignInButton')"/>
+					  			</a>
+					  			<!-- Will display when user is logged in -->
+					  			<a href="{{log_url}}" class="btn btn-primary" id="bigLogout" role="button">Log Out</a>
+					  		</div>
+				  		</li>
+	  				</ul>
     			</div>
   			</div>
 		</nav>

@@ -1,7 +1,42 @@
 {% extends "templates/base.html" %}
 
-{% block content %}
-	<div>
-		CONTACT ME
-	</div>
+{% block head %}
+<!-- My contact stylesheet -->
+<link rel="stylesheet" href="static/css/contact.css">
+{% endblock %}
+
+{% block content %} 
+<div id="contact-body">
+    <div class="jumbotron">
+        <h1> Contact </h1>
+    </div>
+    <div class="container">
+        <div class="row" id="email-me">
+        	<div class="col-xs-12">
+        		<h2> You can e-mail me at <span>abdulali@umich.edu</span>.
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12">
+        		<h3> I am also on the following sites...</h3>
+        	</div>
+        </div>
+        <div class="row" id="icons">
+        	<div class="col-xs-12 col-md-4">
+        		<a href="https://github.com/abdulaliumich">
+        			<img src="../static/imgs/github.png" class="icon" alt="GitHub logo"/>
+        		</a>
+        	</div>
+        	<div class="col-xs-12 col-md-4">
+        		<a href="https://twitter.com/greenbird534">
+        			<img src="../static/imgs/twitter.png" class="icon" alt="twitter logo"/>
+        		</a>
+        	</div>
+        	<div class="col-xs-12 col-md-4">
+        		<a href="https://www.linkedin.com/in/aliabdulhamid">
+        			<img src="../static/imgs/linkedin.png" class="icon" alt="linkedin logo"/>
+        		</a>
+        	</div>
+      </div>
+</div>
 {%endblock%}

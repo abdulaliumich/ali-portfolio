@@ -1,0 +1,40 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+}
+
+#contact-body {
+	position: relative;
+	overflow: auto;
+	min-height: 93vh;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+#email-me {
+	margin-bottom: 50px;
+}
+
+	#email-me span {
+		color: red;
+	}
+
+#icons {
+	margin-top: 30px;
+}
+	#icons div:hover {
+		background-color: #efefef;
+	}
+	
+.icon {
+	width:120px;
+	height: 120px;
+}
+
+footer {
+	position: absolute;
+	height:60px;
+}

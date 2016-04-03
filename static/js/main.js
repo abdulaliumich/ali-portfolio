@@ -45,4 +45,27 @@ function loginButton(loginId, logoutId, loggedIn) {
 	else {
 		document.getElementById(logoutId).style.display = "none";
 	}
-}
+};
+
+
+
+$( document ).ready(function() {
+	console.log("here");
+	//Change navbar from nav-pills to nav-navbar based on the screen size of the device
+    if ($(window).width() < 768) {
+    	$('#my-navbar').removeClass('nav-pills').addClass('navbar-nav');
+    } 
+    else {
+    	console.log($(window).width());
+    }
+});
+
+$(window).on('resize', function(){
+      var win = $(this);
+      if (win.width() >= 768) {
+      	$('#my-navbar').removeClass('navbar-nav').addClass('nav-pills');
+      }
+      else {
+      	$('#my-navbar').removeClass('nav-pills').addClass('navbar-nav');
+      }
+});

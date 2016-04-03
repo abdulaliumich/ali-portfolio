@@ -6,6 +6,10 @@ body {
 	min-height: 100%;
 }
 
+.jumbotron {
+	background-color: #88E6BB;
+}
+
 #contact-body {
 	position: relative;
 	overflow: auto;

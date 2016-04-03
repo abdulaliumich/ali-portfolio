@@ -1,30 +1,22 @@
-#guestbook-body {
-	background:url('../imgs/landscape.jpg');
-	opacity: 0.8;
-	background-size: cover;
-	background-repeat: no-repeat;
-	min-width: 100%;
-	min-height: 200px;
+
+#guestbook-body h1 {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	margin: 0 auto;
 }
-	#guestbook-body h1 {
+
+#guestbook-body .container {
+	margin-top: 50px;
+	background-color: white;
+	color:black;
+	opacity: .9;
+}
+
+	#guestbook-body .container h2 {
+		width: 100%;
 		text-align: center;
-		color: white;
-		font-weight: bold;
-		margin: 0 auto;
 	}
-
-
-	#guestbook-body .container {
-		margin-top: 50px;
-		background-color: white;
-		color:black;
-		opacity: .9;
-	}
-
-		#guestbook-body .container h2 {
-			width: 100%;
-			text-align: center;
-		}
 
 #compose-message {
 	margin-bottom: 10px;
@@ -69,6 +61,15 @@
 
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
+	body {
+		background-color: none;
+	}
+	
+	#guestbook-body h1 {
+		color: black;
+		margin-top: 40px;
+	}
+
 
 	.message-header {
 		min-height: 20px;
@@ -86,9 +87,16 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-	#guestbook-body h1 {
-		font-size: 4em;
+	#guestbook-body {
+		background:url('../imgs/landscape.jpg');
+		opacity: 0.8;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
+		#guestbook-body h1 {
+			font-size: 4em;
+			margin-top: 0;
+		}
 
 	.message-header {
 		min-height: 30px;

@@ -3,6 +3,7 @@
 /* Navigation stuff */
 
 .container-fluid {
+	background-color: #243045;
 }
 
 .navbar  {
@@ -25,7 +26,8 @@
 			font-weight: bold;
 		}
 			.nav-pills > li > a:hover {
-				background-color: #1a1a1a;
+				background-color: gray;
+				color: white;
 			}
 			
 			/* Current page */
@@ -33,7 +35,7 @@
 				background-color: black;
 			}
 				.nav-pills > li.active > a:hover {
-					background-color: #1a1a1a;
+					background-color: gray;
 				}
 
 
@@ -69,14 +71,13 @@ footer {
 		text-align: center;
 	}
 
-		.navbar-header > div > span:first-child {
-			font-size: 34px;
-		}
-
 	/* Switch tablet/desktop login buttons with mobile version */
 	#smallButton {
 		display: inline-block;
 		float: right;
+	}
+	#smallLogout {
+		margin-top: 6px;
 	}
 	#bigButton {
 		display: none;
@@ -133,6 +134,9 @@ footer {
 		#bigButton #bigLogout {
 			margin-top: 6px;
 		}
+	#bigSignInButton {
+		width:150px;
+	}
 
 }
 
@@ -165,6 +169,9 @@ footer {
 	#bigButton {
 		margin-top: 0px;
 		margin-right: 0px;
+	}
+	#bigSignInButton {
+		width: 191px;
 	}
 
 }

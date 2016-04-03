@@ -1,10 +1,13 @@
 .jumbotron {
 	text-align: center;
+	background-color: #88E6BB;
+	color: white;
 }
 
 .jumbotron img {
 	width: 40%;
 	border-radius: 50%;
+	border: 1px solid black;
 }
 
 #about-body > container > row {

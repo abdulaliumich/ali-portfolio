@@ -10,7 +10,7 @@ body {
 	position: relative;
 	overflow: auto;
 	min-height: 93vh;
-	padding-bottom: 50px;
+	padding-bottom: 80px;
 	text-align: center;
 }
 
@@ -25,11 +25,9 @@ body {
 #icons {
 	margin-top: 30px;
 }
-	#icons div:hover {
-		background-color: #efefef;
-	}
-	
+
 .icon {
+	margin-top: 40px;
 	width:120px;
 	height: 120px;
 }

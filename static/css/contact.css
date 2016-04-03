@@ -7,7 +7,7 @@ body {
 }
 
 .jumbotron {
-	background-color: #efefef;
+	background-color: none;
 }
 
 #contact-body {
@@ -17,6 +17,7 @@ body {
 	padding-bottom: 10vh;
 	text-align: center;
 	background-color: #efefef;
+	color: black;
 }
 
 #email-me {

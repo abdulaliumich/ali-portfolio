@@ -55,9 +55,6 @@ $( document ).ready(function() {
 	//Change navbar from nav-pills to nav-navbar based on the screen size of the device
     if ($(window).width() < 768) {
     	$('#my-navbar').removeClass('nav-pills').addClass('navbar-nav');
-    } 
-    else {
-    	console.log($(window).width());
     }
 });
 

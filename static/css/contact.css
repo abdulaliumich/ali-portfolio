@@ -7,19 +7,20 @@ body {
 }
 
 .jumbotron {
-	background-color: white;
+	background-color: #efefef;
 }
 
 #contact-body {
 	position: relative;
 	overflow: auto;
 	min-height: 93vh;
-	padding-bottom: 80px;
+	padding-bottom: 10vh;
 	text-align: center;
+	background-color: #efefef;
 }
 
 #email-me {
-	margin-bottom: 50px;
+	margin-bottom: 9vh;
 }
 
 	#email-me span {
@@ -38,5 +39,9 @@ body {
 
 footer {
 	position: absolute;
-	height:60px;
+	height:8vh;
 }
+	footer p {
+		position: relative;
+		text-align: left;
+	}

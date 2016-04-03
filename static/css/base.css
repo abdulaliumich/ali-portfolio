@@ -4,45 +4,60 @@ body {
 
 /* Header stuff */
 
-
-
-
 /* Navigation stuff */
 
-.container-fluid {
+.navbar, .navbar-default, .container-fluid {
 	background-color: #243045;
 }
 
 .navbar  {
 	min-height: 0px;
-	margin-top: 5px;
 	margin-bottom: 0px;
 	border: 0px;
+	border-top: 2px solid black;
 }
 
 .nav-pills {
 	display: inline-block;
 	margin-bottom: 0px;
+	padding-top: 5px;
 }
 	.nav-pills > li {
 		margin-right: 15px;
 	}
-		.nav-pills > li > a {
+		/* Note: the reason why there is nav-pills and navbar-nav is because
+		   the mobile version of the site uses navbar-nav and the tablet and bigger versions
+		   use nav-pills */
+		.nav-pills > li > a,
+		.navbar-nav > li > a {
 			border: 1px solid black;
-			color: black;
+			background-color: white;
+			color: black !important;
 			font-weight: bold;
 		}
-			.nav-pills > li > a:hover {
-				background-color: gray;
-				color: white;
+			.nav-pills > li > a:hover,
+			.navbar-nav > li > a:hover {
+				background-color: gray !important;
+				color: white !important;
 			}
 			
 			/* Current page */
-			.nav-pills > li.active > a {
-				background-color: black;
+			.nav-pills > li.active > a,
+			.navbar-nav > li.active > a
+			 {
+				background-color: #2e5cb8 !important;
+				color: white !important;
 			}
-				.nav-pills > li.active > a:hover {
-					background-color: gray;
+			.nav-pills > li.active > a {
+				border: 4px solid white
+			}
+
+			.navbar-nav > li.active > a {
+				background-image: none !important;
+			}
+				.nav-pills > li.active > a:hover,
+				.navbar-nav > li.active > a:hover {
+					background-color: gray !important;
 				}
 
 
@@ -50,11 +65,13 @@ body {
 
 footer {
 	position: relative;
-	height: 60px;
+	height: 8vh;
 	bottom: 0;
 	margin-top: 20px;
 	width: 100%;
-	background-color: green;
+	background-color: #243045;
+	border-top: 2px solid black;
+	color: white;
 }
 	footer p {
 		position: absolute;
@@ -93,6 +110,7 @@ footer {
 	#bigButton {
 		display: none;
 	}
+
 
 }
 
@@ -137,11 +155,11 @@ footer {
 	}
 	#bigButton {
 		display: inline-block;
-		margin-top: 22px;
+		margin-top: 33px;
 		margin-right: 10px;
 	}
 		#bigButton #bigLogout {
-			margin-top: 6px;
+			margin-top: 0px;
 		}
 	#bigSignInButton {
 		width:150px;
@@ -178,8 +196,12 @@ footer {
 		margin-top: 0px;
 		margin-right: 0px;
 	}
+		#bigButton #bigLogout {
+			margin-top: 10px;
+		}
 	#bigSignInButton {
 		width: 191px;
+		margin-top: 5px;
 	}
 
 }

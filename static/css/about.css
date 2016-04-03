@@ -10,9 +10,13 @@
 	border: 1px solid black;
 }
 
-#about-body > container > row {
-	text-align: center;
+#about-body {
+	background-color: #efefef;
 }
+
+	#about-body > container > row {
+		text-align: center;
+	}
 
 /* Media queries */
 

@@ -7,6 +7,8 @@
 	width: 100%;
 	display: table;
 	font-weight: bold;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
 }
 	.main-image h1 {
 		vertical-align: middle;
@@ -18,17 +20,16 @@
 #index-body {
 	color: black;
 	text-align: center;
+	background-color: #efefef;
 }
 
 #intro {
-	margin: 5% 3% 3% 3%;
+	padding: 6% 3% 3% 3%;
 }
 
 #section-container {
 	margin-top: 5%;
-	margin-bottom: 5%;
 	border-top: 2px solid black;
-	border-bottom: 2px solid black;
 	padding-top: 5%;
 	padding-bottom: 7%;
 	height: 100%;
@@ -74,6 +75,10 @@
 					display: block;
 					font-size: 4em;
 				}
+
+footer {
+	margin-top: 0;
+}
 
 /* Media queries */
 

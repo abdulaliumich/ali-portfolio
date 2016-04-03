@@ -12,8 +12,10 @@
 		<div class="container">
 			<div class="row" id="compose-message">
 				<div class="col-xs-12 col-md-4">
-					<h2>Write your message here:</h2>
 					<form method="post" action='/guestbook'>
+						<label for="message-input">
+							<h2>Write your message here:</h2>
+						</label>
 						<textarea name='message' id='message-input' rows="3"></textarea>
 						<br>
 						<input type="submit" class="btn btn-success" id="submit" value="Post">

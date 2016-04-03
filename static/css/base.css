@@ -1,4 +1,11 @@
+body {
+	max-width: 100% !important;
+}
+
 /* Header stuff */
+
+
+
 
 /* Navigation stuff */
 
@@ -83,8 +90,6 @@ footer {
 		display: none;
 	}
 
-	/*					 */
-
 }
 
 /* Extra Small Devices, Phones */ 
@@ -137,7 +142,6 @@ footer {
 	#bigSignInButton {
 		width:150px;
 	}
-
 }
 
 /* Medium Devices, Desktops */

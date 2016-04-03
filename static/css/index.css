@@ -3,9 +3,10 @@
 	opacity: 0.9;
 	background-size: cover;
 	background-repeat: no-repeat;
-	min-width: 100%;
-	min-height: 200px;
+	background-position: center;
+	width: 100%;
 	display: table;
+	font-weight: bold;
 }
 	.main-image h1 {
 		vertical-align: middle;
@@ -21,7 +22,6 @@
 
 #intro {
 	margin: 5% 3% 3% 3%;
-	font-size: 2em;
 }
 
 #section-container {
@@ -35,7 +35,6 @@
 }
 
 #section-header {
-	font-size: 2em;
 	margin-bottom: 3%;
 }
 
@@ -45,75 +44,80 @@
 	height: 100%;
 }
 
-#section > div > a {
-	position: relative;
-	text-decoration: none;
-	color: black;
-	min-height: 100%;
-}
-#section > div > a:visited {
-	color: black;
-}
-	#section > div > a > div {
-		border: 1px solid black;
-		margin-left: 2%;
-		font-weight: bold;
+	#section > div > a {
+		position: relative;
+		text-decoration: none;
+		color: black;
+		min-height: 100%;
 	}
-		#section > div > a:hover > div {
-			background-color: black;
-			color: white;
+	#section > div > a:visited {
+		color: black;
+	}
+		#section > div > a > div {
+			border: 1px solid black;
+			margin-left: 2%;
+			font-weight: bold;
 		}
-			#section > div > a > div > div{
-				margin-bottom: 2%;
+			#section > div > a:hover > div {
+				background-color: black;
+				color: white;
 			}
-			#section > div > a > div > p{
-				margin: 2%;
-				font-weight: normal;
-			}
+				#section > div > a > div > div{
+					margin-bottom: 2%;
+				}
+				#section > div > a > div > p{
+					margin: 2%;
+					font-weight: normal;
+				}
 
-			#section> div > a > div > div > i {
-				display: block;
-				font-size: 4em;
-			}
+				#section> div > a > div > div > i {
+					display: block;
+					font-size: 4em;
+				}
 
 /* Media queries */
 
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
 	.main-image {
-		min-height: 200px;
+		min-height: 50vh;
 	}
 		.main-image h1 {
-			font-size: 2em;
+			font-size: 3em;
 		}
+
+	#section > div {
+		margin-bottom: 5%;
+	}
 
 }
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
-	.main-image {
-		min-height: 300px;
-	}
-
 
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 	.main-image {
-		min-height: 400px;
+		min-height: 100vh;
 	}
 		.main-image h1 {
 			font-size: 4em;
 		}
 
+	#intro, #section-header {
+		font-size: 2em;
+	}
+
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-	.main-image {
-		min-height: 700px;
+	.main-image h1 {
+		font-size: 6em;
 	}
-		.main-image h1 {
-			font-size: 6em;
-		}
+
+	#section > div {
+		margin-bottom: 0;
+	}
 }

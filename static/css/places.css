@@ -1,3 +1,15 @@
+.main-image {
+	width: 100%;
+	display: table;
+	font-weight: bold;
+	margin-bottom: 15vh;
+}
+	.main-image h1 {
+		vertical-align: middle;
+		display: table-cell;
+		text-align: center;
+	}
+
 
 #places-body h3 {
 	display: inline-block;
@@ -13,4 +25,54 @@
 
 .twitter-share-button {
 	float: right;
+}
+
+/* Media queries */
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+	.main-image {
+		min-height: 50vh;
+		background:url('../imgs/houses.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		color: white;
+	}
+		.main-image h1 {
+			font-size: 4em;
+		}
+
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.main-image {
+		min-height: 100vh;
+		background:url('../imgs/hill.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	    -webkit-filter: brightness(100%); /* Chrome, Safari, Opera */
+	    filter: brightness(100%);
+		color: white;
+	}
+		.main-image h1 {
+			font-size: 5em;
+		}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.main-image {
+		background:url('../imgs/buildings.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		color: black;
+	}
 }

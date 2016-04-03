@@ -41,6 +41,7 @@
 	display: table;
 	padding-left: 5px;
 	margin-left: 0;
+	padding-bottom: 3vh;
 	font-size: 1.5em;
 }
 	.message-header p {
@@ -49,15 +50,15 @@
 	}
 
 .message-body {
-	display: table;
 	width: 100%;
 	border-bottom: 1px solid black;
 	padding-left: 5px;
 	font-size: 1.2em;
 }
 	.message-body p {
-		display: table-cell;
-		vertical-align: middle;
+		width: 100%;
+		word-wrap: break-word;
+
 	}
 
 footer {

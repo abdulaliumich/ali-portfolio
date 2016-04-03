@@ -36,8 +36,8 @@
 		{% endfor %}
 		
 		<ul class="pager">
-	  		<li class="previous"><a href="{% if message_block - 10 >= 0 %}/guestbook?start={{message_block - 10}} {% else %}{% endif %}">Previous</a></li>
-	  		<li class="next"><a href="{% if more_messages %} /guestbook?start={{message_block + 10}} {% else %}{% endif %}">Next</a></li>
+	  		<li class="previous{% if not (message_block - 10 >= 0) %}{{' disabled'}}{% endif %}"><a href="{% if message_block - 10 >= 0 %}/guestbook?start={{message_block - 10}} {% else %}{% endif %}">Previous</a></li>
+	  		<li class="next{% if not more_messages %}{{' disabled'}}{% endif %}"><a href="{% if more_messages %} /guestbook?start={{message_block + 10}} {% else %}{% endif %}">Next</a></li>
 		</ul>
 	</div>
 {%endblock%}

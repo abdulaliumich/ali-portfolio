@@ -49,7 +49,7 @@ body {
 				color: white !important;
 			}
 			.nav-pills > li.active > a {
-				border: 4px solid white
+				border: 4px solid white;
 			}
 
 			.navbar-nav > li.active > a {

@@ -18,13 +18,15 @@
 		opacity: .9;
 	}
 
-		#guestbook-body .container h2 {
-			width: 100%;
-			text-align: center;
-		}
 
 #compose-message {
 	margin-bottom: 10px;
+	text-align: center;
+}
+
+label {
+	text-align: center;
+	font-size: 2em;
 }
 
 #message-input {
@@ -59,15 +61,6 @@
 		width: 100%;
 		word-wrap: break-word;
 
-	}
-
-footer {
-	position: absolute;
-	height: 8vh;
-}
-	footer p {
-		position: relative;
-		text-align: left;
 	}
 
 

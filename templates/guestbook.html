@@ -14,7 +14,7 @@
 				<div class="col-xs-12 col-md-4">
 					<form method="post" action='/guestbook'>
 						<label for="message-input">
-							<h2>Write your message here:</h2>
+							Write your message here:
 						</label>
 						<textarea name='message' id='message-input' rows="3"></textarea>
 						<br>
@@ -22,23 +22,24 @@
 					</form>
 				</div>
 			</div>
-		{% for message in messages %}
-			<div class="row">
-				<div class="col-xs-12 message">
-					<div class="message-header">
-						<p>On {{message.timestamp.month}}/{{message.timestamp.day}}/{{message.timestamp.year}}, {{message.user}} wrote: </p>
-					</div>
-					<div class="message-body">
-						<p> {{message.message}} </p>
+			{% for message in messages %}
+				<div class="row">
+					<div class="col-xs-12 message">
+						<div class="message-header">
+							<p>On {{message.timestamp.month}}/{{message.timestamp.day}}/{{message.timestamp.year}}, {{message.user}} wrote: </p>
+						</div>
+						<div class="message-body">
+							<p> {{message.message}} </p>
+						</div>
 					</div>
 				</div>
-			</div>
-		{% endfor %}
-		
-		<ul class="pager">
-	  		<li class="previous{% if not (message_block - 10 >= 0) %}{{' disabled'}}{% endif %}"><a href="{% if message_block - 10 >= 0 %}/guestbook?start={{message_block - 10}} {% else %}{% endif %}">Previous</a></li>
-	  		<li class="next{% if not more_messages %}{{' disabled'}}{% endif %}"><a href="{% if more_messages %} /guestbook?start={{message_block + 10}} {% else %}{% endif %}">Next</a></li>
-		</ul>
+			{% endfor %}
+			
+			<ul class="pager">
+		  		<li class="previous{% if not (message_block - 10 >= 0) %}{{' disabled'}}{% endif %}"><a href="{% if message_block - 10 >= 0 %}/guestbook?start={{message_block - 10}} {% else %}{% endif %}">Previous</a></li>
+		  		<li class="next{% if not more_messages %}{{' disabled'}}{% endif %}"><a href="{% if more_messages %} /guestbook?start={{message_block + 10}} {% else %}{% endif %}">Next</a></li>
+			</ul>
+		</div>
 	</div>
 {%endblock%}
 "{% if current_page == 'INDEX' %}active{% else %}{% endif %}"

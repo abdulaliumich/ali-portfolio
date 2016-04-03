@@ -1,7 +1,8 @@
+/* Header stuff */
 .jumbotron {
 	text-align: center;
-	color: white;
 	margin-bottom: 0;
+	color: black;
 	/* Reference : w3schools page on gradients */
     background: #243045; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#243045, #efefef); /* For Safari 5.1 to 6.0 */
@@ -10,11 +11,16 @@
     background: linear-gradient(#243045, #efefef); /* Standard syntax */
     border-top: 2px solid black;
 }
+	.jumbotron h1 {
+		text-shadow: 2px 2px black;
+	}
 
-.jumbotron img {
-	width: 40%;
-	border-radius: 50%;
-}
+	.jumbotron img {
+		width: 40%;
+		border-radius: 50%;
+	}
+
+/*				*/
 
 #about-body {
 	background-color: #efefef;
@@ -25,6 +31,11 @@
 	#about-body > .container > .row {
 		border-bottom: 1px solid black;
 	}
+
+#places-link {
+	font-weight: bold;
+	color: black;
+}
 
 #project-body {
 	padding-top: 0 !important;

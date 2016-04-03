@@ -1,3 +1,4 @@
+/* Header stuff */
 .main-image {
 	background:url('../imgs/ezcaba.jpg');
 	opacity: 0.9;
@@ -14,8 +15,10 @@
 		vertical-align: middle;
 		display: table-cell;
 		text-align: center;
-		color: white;
+		color: black;
+		font-weight: bold;
 	}
+/*				*/
 
 #index-body {
 	color: black;

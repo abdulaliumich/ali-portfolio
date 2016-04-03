@@ -3,6 +3,7 @@ body {
 }
 
 /* Header stuff */
+/* See the other css pages to see the styling for the header (e.g. the jumbotron and main-image classes are part of the header)
 
 /* Navigation stuff */
 
@@ -59,6 +60,9 @@ body {
 				.navbar-nav > li.active > a:hover {
 					background-color: gray !important;
 				}
+#button-text {
+	display: none;
+}
 
 
 /* Footer stuff */

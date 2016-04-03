@@ -1,3 +1,4 @@
+/* Header stuff */
 .main-image {
 	width: 100%;
 	display: table;
@@ -10,6 +11,7 @@
 		display: table-cell;
 		text-align: center;
 	}
+/*				*/
 
 #places-intro {
 	padding-top: 8vh;

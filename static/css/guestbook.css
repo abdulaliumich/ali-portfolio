@@ -6,7 +6,8 @@
 }
 	#guestbook-body h1 {
 		text-align: center;
-		color: white;
+		color: black;
+		text-shadow: 2px 2px black;
 		font-weight: bold;
 		margin: 0 auto;
 	}

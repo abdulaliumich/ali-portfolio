@@ -1,22 +1,27 @@
-
-#guestbook-body h1 {
-	text-align: center;
-	color: white;
-	font-weight: bold;
-	margin: 0 auto;
+#guestbook-body {
+	position: relative;
+	overflow: auto;
+	min-height: 93vh;
+	padding-bottom: 80px;
 }
-
-#guestbook-body .container {
-	margin-top: 50px;
-	background-color: white;
-	color:black;
-	opacity: .9;
-}
-
-	#guestbook-body .container h2 {
-		width: 100%;
+	#guestbook-body h1 {
 		text-align: center;
+		color: white;
+		font-weight: bold;
+		margin: 0 auto;
 	}
+
+	#guestbook-body .container {
+		margin-top: 50px;
+		background-color: white;
+		color:black;
+		opacity: .9;
+	}
+
+		#guestbook-body .container h2 {
+			width: 100%;
+			text-align: center;
+		}
 
 #compose-message {
 	margin-bottom: 10px;
@@ -54,6 +59,11 @@
 		display: table-cell;
 		vertical-align: middle;
 	}
+
+footer {
+	position: absolute;
+	height: 60px;
+}
 
 
 

@@ -2,7 +2,6 @@
 	width: 100%;
 	display: table;
 	font-weight: bold;
-	margin-bottom: 15vh;
 }
 	.main-image h1 {
 		vertical-align: middle;
@@ -10,6 +9,14 @@
 		text-align: center;
 	}
 
+#places-intro {
+	margin-top: 8vh;
+	text-align: center;
+	margin-bottom: 8vh;
+}
+	#places-intro h2{
+		margin-top: 0;
+	}
 
 #places-body h3 {
 	display: inline-block;
@@ -22,6 +29,7 @@
 	min-height:213.172px;
 	margin-bottom: 40px;
 }
+
 
 .twitter-share-button {
 	float: right;
@@ -42,6 +50,12 @@
 		.main-image h1 {
 			font-size: 4em;
 		}
+
+	.row div {
+		margin-left: 5vh;
+		margin-right: 5vh;
+		max-width: 90%;
+	}
 
 }
 /* Extra Small Devices, Phones */ 
@@ -64,6 +78,7 @@
 		.main-image h1 {
 			font-size: 5em;
 		}
+
 }
 
 /* Medium Devices, Desktops */
@@ -75,4 +90,14 @@
 		background-position: center;
 		color: black;
 	}
+	
+	.row {
+		margin-left: 1vh;
+		margin-right: 1vh;
+	}
+		.row div {
+			margin-left: 0vh;
+			margin-right: 0vh;
+			max-width: 100%;
+		}
 }

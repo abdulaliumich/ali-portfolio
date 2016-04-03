@@ -13,3 +13,33 @@
 #about-body > container > row {
 	text-align: center;
 }
+
+/* Media queries */
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+	/* Only display the image on devices the size of a tablet or higher */
+	.jumbotron img {
+		display: none;
+	}
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.jumbotron img {
+		display: inline-block;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+
+}

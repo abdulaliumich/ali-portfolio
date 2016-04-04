@@ -3,20 +3,46 @@ body {
 }
 
 /* Header stuff */
-/* See the other css pages to see the styling for the header (e.g. the jumbotron and main-image classes are part of the header)
+/* See the other css pages to see additional styling for the header (e.g. the jumbotron and main-image classes are part of the header) */
+
+header > nav {
+	text-align: center;
+}
+
+#top-header {
+	position: relative;
+	text-align: left;
+	font-size: 3em;
+    background: #243045;
+}
+#my-name {
+	padding-left: 2vh;
+	text-decoration: none;
+	color: white;
+}
+#my-name:hover {
+	text-decoration: none;
+	background: none;
+	color: #737373 !important;
+}
+#my-name:visited {
+	color: white;
+}
 
 /* Navigation stuff */
 
 .navbar, .navbar-default, .container-fluid {
 	background-color: #243045;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .navbar  {
 	min-height: 0px;
 	margin-bottom: 0px;
 	border: 0px;
-	border-top: 2px solid black;
 }
+
 
 .nav-pills {
 	display: inline-block;
@@ -106,6 +132,10 @@ footer {
 
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
+	#top-header {
+		text-align: center;
+	}
+
 	/* Put the mobile hamburger menu on the left side */
 	.navbar-toggle {
 		float: left;
@@ -138,6 +168,9 @@ footer {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	#top-header {
+		text-align: left;
+	}
 
 	.navbar-header > div {
 		display: none;
@@ -171,9 +204,9 @@ footer {
 		display: none;
 	}
 	#bigButton {
+		float: right;
 		display: inline-block;
-		margin-top: 33px;
-		margin-right: 10px;
+		padding-right: 1vw;
 	}
 		#bigButton #bigLogout {
 			margin-top: 0px;
@@ -210,11 +243,12 @@ footer {
 	}
 
 	#bigButton {
-		margin-top: 0px;
+		float:right;
+		margin-top: -2px;
 		margin-right: 0px;
 	}
 		#bigButton #bigLogout {
-			margin-top: 10px;
+			margin-top: 5px;
 		}
 	#bigSignInButton {
 		width: 191px;

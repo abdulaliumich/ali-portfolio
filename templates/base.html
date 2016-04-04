@@ -39,6 +39,23 @@
 
 <body>
 	<header>
+		<div id="top-header">
+			<a href="/index" id="my-name">
+				Ali Abdulhamid
+			</a>
+			<span id="bigButton">
+				<div>
+			  		<!-- Will display when user is not logged in -->
+		  			<a href="{{log_url}}">
+		  				<img id ="bigSignInButton" src="static/imgs/signin/btn_google_signin_dark_normal_web.png" alt="Google Sign In Button"
+		  				onload="loginButton('bigSignInButton', 'bigLogout', {{logged_in}})" onmouseover ="signInMouseOver('bigSignInButton')"
+		  				onmouseout="signInMouseOut('bigSignInButton')" onmousedown="signInMouseDown('bigSignInButton')"/>
+		  			</a>
+		  			<!-- Will display when user is logged in -->
+		  			<a href="{{log_url}}" class="btn btn-primary" id="bigLogout" role="button">Log Out</a>
+	  			</div>
+	  		</span>
+		</div>
 		<nav class="navbar navbar-default">
   			<div class="container-fluid">
 			    <div class="navbar-header">
@@ -105,20 +122,6 @@
 				        	</a>
 				        </li>
       				</ul>
-      				<ul class="nav navbar-right">
-	  					<li id="bigButton">
-	  						<div>
-						  		<!-- Will display when user is not logged in -->
-					  			<a href="{{log_url}}">
-					  				<img id ="bigSignInButton" src="static/imgs/signin/btn_google_signin_light_normal_web.png" alt="Google Sign In Button"
-					  				onload="loginButton('bigSignInButton', 'bigLogout', {{logged_in}})" onmouseover ="signInMouseOver('bigSignInButton')"
-					  				onmouseout="signInMouseOut('bigSignInButton')" onmousedown="signInMouseDown('bigSignInButton')"/>
-					  			</a>
-					  			<!-- Will display when user is logged in -->
-					  			<a href="{{log_url}}" class="btn btn-primary" id="bigLogout" role="button">Log Out</a>
-					  		</div>
-				  		</li>
-	  				</ul>
     			</div>
   			</div>
 		</nav>

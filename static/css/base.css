@@ -29,6 +29,8 @@ header > nav {
 	color: white;
 }
 
+/*				*/
+
 /* Navigation stuff */
 
 .navbar, .navbar-default, .container-fluid {
@@ -248,7 +250,7 @@ footer {
 		margin-right: 0px;
 	}
 		#bigButton #bigLogout {
-			margin-top: 5px;
+			margin-top: 0px;
 		}
 	#bigSignInButton {
 		width: 191px;

@@ -44,16 +44,14 @@
 				Ali Abdulhamid
 			</a>
 			<span id="bigButton">
-				<div>
-			  		<!-- Will display when user is not logged in -->
-		  			<a href="{{log_url}}">
-		  				<img id ="bigSignInButton" src="static/imgs/signin/btn_google_signin_dark_normal_web.png" alt="Google Sign In Button"
-		  				onload="loginButton('bigSignInButton', 'bigLogout', {{logged_in}})" onmouseover ="signInMouseOver('bigSignInButton')"
-		  				onmouseout="signInMouseOut('bigSignInButton')" onmousedown="signInMouseDown('bigSignInButton')"/>
-		  			</a>
-		  			<!-- Will display when user is logged in -->
-		  			<a href="{{log_url}}" class="btn btn-primary" id="bigLogout" role="button">Log Out</a>
-	  			</div>
+		  		<!-- Will display when user is not logged in -->
+	  			<a href="{{log_url}}">
+	  				<img id ="bigSignInButton" src="static/imgs/signin/btn_google_signin_dark_normal_web.png" alt="Google Sign In Button"
+	  				onload="loginButton('bigSignInButton', 'bigLogout', {{logged_in}})" onmouseover ="signInMouseOver('bigSignInButton')"
+	  				onmouseout="signInMouseOut('bigSignInButton')" onmousedown="signInMouseDown('bigSignInButton')"/>
+	  			</a>
+	  			<!-- Will display when user is logged in -->
+	  			<a href="{{log_url}}" class="btn btn-primary" id="bigLogout" role="button">Log Out</a>
 	  		</span>
 		</div>
 		<nav class="navbar navbar-default">

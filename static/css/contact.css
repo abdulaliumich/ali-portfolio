@@ -30,7 +30,7 @@ body {
 #contact-body {
 	position: relative;
 	overflow: auto;
-	padding-bottom: 10vh;
+	padding-bottom: 8vh;
 	text-align: center;
 	background-color: #efefef;
 	color: black;
@@ -38,7 +38,7 @@ body {
 }
 
 #email-me {
-	margin-bottom: 9vh;
+	margin-bottom: 4vh;
 }
 
 	#email-me span {

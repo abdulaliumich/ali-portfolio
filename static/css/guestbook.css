@@ -64,6 +64,12 @@ label {
 
 	}
 
+/* Reference: http://stackoverflow.com/questions/2091168/disable-a-link-using-css */
+.disabled a {
+   pointer-events: none;
+   cursor: default;
+}
+
 
 
 /* Media queries */

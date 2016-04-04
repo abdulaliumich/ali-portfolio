@@ -24,13 +24,14 @@
 
 #places-body {
 	color: black;
-    background-color: #efefef;	
+    background-color: #efefef;
 }
 
 	#places-body h3 {
 		display: inline-block;
 		margin-right:0;
 		margin-top: 0;
+		padding-left: 1vw;
 	}
 
 	#places-body img {
@@ -39,6 +40,10 @@
 		margin-bottom: 40px;
 	}
 
+.row {
+	margin-left: 1vw;
+	margin-right: 1vw;
+}
 
 .twitter-share-button {
 	float: right;
@@ -60,11 +65,6 @@
 			font-size: 4em;
 		}
 
-	.row div {
-		margin-left: 5vh;
-		margin-right: 5vh;
-		max-width: 90%;
-	}
 
 }
 /* Extra Small Devices, Phones */ 
@@ -100,13 +100,4 @@
 		color: black;
 	}
 	
-	.row {
-		margin-left: 1vh;
-		margin-right: 1vh;
-	}
-		.row div {
-			margin-left: 0vh;
-			margin-right: 0vh;
-			max-width: 100%;
-		}
 }

@@ -22,8 +22,8 @@ body {
     min-height: 33vh;
 }
 	.jumbotron h1 {
-		text-shadow: 2px 2px black;
 		color: black;
+		font-weight: bold;
 	}
 /*				*/
 

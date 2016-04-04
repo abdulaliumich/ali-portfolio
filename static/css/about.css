@@ -10,11 +10,8 @@
     background: -moz-linear-gradient(#243045, #efefef); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#243045, #efefef); /* Standard syntax */
     border-top: 2px solid black;
+    font-weight: bold;
 }
-	.jumbotron h1 {
-		text-shadow: 2px 2px black;
-	}
-
 	.jumbotron img {
 		width: 40%;
 		border-radius: 50%;

@@ -80,8 +80,6 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
-	    -webkit-filter: brightness(100%); /* Chrome, Safari, Opera */
-	    filter: brightness(100%);
 		color: white;
 	}
 		.main-image h1 {

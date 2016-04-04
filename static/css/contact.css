@@ -59,6 +59,7 @@ footer {
 	height:8vh;
 }
 	footer p {
+		display: table;
+		vertical-align: middle;
 		position: relative;
-		text-align: left;
 	}

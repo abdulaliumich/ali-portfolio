@@ -75,6 +75,7 @@ footer {
 	background-color: #243045;
 	border-top: 2px solid black;
 	color: white;
+	text-align: center;
 }
 	footer p {
 		position: absolute;
@@ -82,11 +83,25 @@ footer {
 		top: 50%;
 		transform: translateY(-50%);
 		padding-left: 10px;
+		padding-right: 10px;
 	}
 		footer p span {
-			padding-right: 20px;
+			float:left;
+		}
+		footer p a {
 			float: right;
 		}
+
+		footer p a {
+			border: 1px solid black !important;
+			border-color: black !important;
+			background: none !important;
+			background-color: #00274c !important;
+			color: #ffcb05 !important;
+		}
+			footer p a:hover {
+				box-shadow: 1px 1px 1px black;
+			}
 
 /* Media queries */
 
